@@ -1,1 +1,1 @@
-anh luv thuyet minh
+anh love thuyet minh
