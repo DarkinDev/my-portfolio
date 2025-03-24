@@ -96,6 +96,7 @@ body {
     background-color: var(--color-gray);
     color: var(--color-white);
 }
+
 .hero-section {
     display: flex;
     justify-content: center;
