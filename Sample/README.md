@@ -1,1 +1,1 @@
-anh love thuyet minh
+This is a practice project of me
