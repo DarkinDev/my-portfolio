@@ -5,7 +5,7 @@
 }
 
 :root {
-  color-scheme: light dark;
+  --color-scheme: light dark;
   --color-white: #fefefe;
   --color-black: #0e0e0e;
   --color-gray: #2f2f2f;
