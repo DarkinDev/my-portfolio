@@ -3,53 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
     <title>Media Diame</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style.media.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="nav-left">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </div>
-        <div class="nav-center">
-          <h1>MEDIA <br />DIAME</h1>
-        </div>
-        <div class="nav-right">
-          <button>Let's Talk</button>
-        </div>
-      </nav>
-    </header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul>
+          <li>
+            <a href="#"
+              >Home
+              <div class="arrow-icon">
+                <img src="asset/svgs/arrow-top-right.svg" alt="nav icon" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >Work
+              <div class="arrow-icon">
+                <img
+                  src="asset/svgs/arrow-top-right.svg"
+                  alt="nav icon" /></div
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >About
+              <div class="arrow-icon">
+                <img
+                  src="asset/svgs/arrow-top-right.svg"
+                  alt="click me!" /></div
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-center">
+        <h1>MEDIA <br />DIAME</h1>
+      </div>
+      <div class="nav-right">
+        <a href="#">Let's Talk</a>
+      </div>
+    </nav>
 
     <main>
-      <section class="hero-section">
-        <div class="hero-left">
-          <div class="hero-right">
-            <img src="travis.png" alt="right image" />
-          </div>
-          <div>
-            CREATIVE DIGITAL PARTNER
-            <div class="img-container">
-              <img src="hinhanh.png" alt="inline image" />
-            </div>
-            <span> GROW ENGAGEMENT </span>
-          </div>
+      <section class="hero">
+        <div class="star-icon">
+          <img src="asset/svgs/star.svg" alt="star icon" />
         </div>
-        <div class="hero-right">
-          <img src="travis.png" alt="right image" />
+
+        <h2>
+          <p>
+            CREATIVE DIGITAL<br />
+            PARTNER
+            <span class="inline-image"
+              ><img
+                src="asset/imgs/minor-img.png"
+                alt="small image"
+                width="100px"
+                height="120px"
+            /></span>
+
+            <span class="end-line"
+              >GROW <br />
+              ENGAGEMENT</span
+            >
+          </p>
+        </h2>
+        <div></div>
+        <div>
+          <img src="./asset/imgs/travis.png" alt="hero image" />
         </div>
       </section>
-      <section>
-        <h2>Our Work</h2>
+      <section class="about">
+        <div class="plus-icon">
+          <p>+</p>
+        </div>
+        <div class="about__content-left">
+          <h3>[ 01 ]</h3>
+        </div>
+        <div class="about__content-right">
+          <article>
+            <h3>About</h3>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex eius maxime quasi eos, sed pariatur rem totam libero ipsam, nulla aut. Eveniet, quibusdam. Repellendus hic quidem sunt quasi temporibus.</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quasi aliquam aliquid delectus quas unde voluptas minima ullam adipisci sint tempore quisquam, sit, quam, exercitationem fugit neque at! Natus, debitis?</p>
+            </div>
+          </article>
+
+          <article>
+            <h3>Approaching Angle</h3>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officiis aliquam nam, incidunt dolorem fugiat soluta modi sit unde vitae! Harum adipisci qui provident impedit perspiciatis sed dolorum laborum voluptatum?
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
-    <footer>
-        TEL: +084869157139
-    </footer>
   </body>
 </html>
