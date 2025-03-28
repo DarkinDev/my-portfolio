@@ -338,6 +338,7 @@ section.experience div.experience__button {
   align-items: center;
   height: 100%;
   width: 100%;
+  border: var(--color-gray-tertiary) solid 1px;
 }
 
 section.experience div.experience__button-content p {
@@ -358,4 +359,54 @@ section.experience div.experience-image {
 section.experience div.experience-image img {
   object-fit: fill;
   width: 100%;
+}
+
+section.services {
+  margin-top: 5rem;
+  border-top: var(--color-gray-secondary) solid 1px;
+}
+
+section.services div.services__text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-white);
+  letter-spacing: -1px;
+  display: flex;
+}
+
+section.services div.services__text span {
+  white-space: nowrap;
+  font-weight: 300;
+  color: var(--color-gray-secondary);
+}
+
+section.services div.services__text h3 {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: var(--color-gray-secondary);
+  font-weight: 300;
+}
+
+section.services div.services__content {
+  display: flex;
+  gap: 1rem;
+  margin-top: 7rem;
+}
+
+section.services div.services__content div.lmk {
+  align-self: flex-end;
+  color: var(--color-white);
+  width: 25vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: -0.00375em;
+}
+
+section.services div.services__content div.skill {
+  color: var(--color-white);
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -9px;
 }
