@@ -10,13 +10,14 @@
   --color-black: #0e0e0e;
   --color-gray: #2f2f2f;
   --color-gray-secondary: #525252;
+  --color-gray-tertiary: #a6a6a6;
 }
 
 body {
   background-color: var(--color-black);
   font-family: Arial, sans-serif;
   padding: 10px 40px;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   position: relative;
 }
@@ -301,10 +302,52 @@ section.experience {
 
 section.experience div.experience__text {
   position: absolute;
+  top: 18rem;
+  left: 5rem;
+  color: var(--color-white);
+
+}
+
+section.experience span.experience__text-start {
+  font-size: 7rem;
+  margin-right: 0rem;
+  letter-spacing: -9px;
+}
+
+section.experience span.experience__text-end {
+  font-size: 7rem;
+  margin-left: 13rem;
+  letter-spacing: -9px;
 }
 
 section.experience div.experience__button {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 7rem;
+  gap: 2rem;
+}
+
+.experience__button-content {
+  display: flex;
+  justify-content: space-around;
+  background: transparent;
+  border-radius: 10rem;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+section.experience div.experience__button-content p {
+  color: var(--color-white);
+  font-size: 3rem;
+  letter-spacing: -2px;
+}
+
+section.experience div.experience__button-content img {
+  width: 30px;
 }
 
 section.experience div.experience-image {
