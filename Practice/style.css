@@ -410,3 +410,100 @@ section.services div.services__content div.skill {
   line-height: 5rem;
   letter-spacing: -9px;
 }
+
+section.get-in-touch {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+section.get-in-touch div.get-in-touch__button {
+  width: 25vw;
+}
+
+section.get-in-touch div.get-in-touch__button button{
+  border: var(--color-gray-tertiary) solid 1px;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  background-color: transparent;
+  width: 13rem;
+}
+
+section.get-in-touch div.get-in-touch__button p {
+  color: var(--color-white);
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: -0.0375em;
+}
+
+section.get-in-touch div.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: var(--color-gray-tertiary) solid 1px;
+}
+
+.identity-design {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 2em;
+  border: var(--color-gray-tertiary) solid 1px;
+  display: flex;
+}
+
+.identity-design div.donut-icon img{
+  width: 60px;
+  height: 60px;
+}
+
+.identity-design div.identity-design__content {
+  display: flex;
+  color: var(--color-white);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 4.5rem;
+  margin-left: 1.5rem;
+  flex-direction: column;
+  height: 35rem;
+  justify-content: space-between;
+}
+
+.identity-design div.identity-design__content p {
+  font-size: 1.2rem;
+  letter-spacing: -0.0375em;
+}
+
+.identity-design__content-top {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.identity-design__content-top a div img {
+  object-fit: fill;
+}
+
+.identity-design__content-top a div {
+  border: var(--color-gray-tertiary) solid 1px;
+  border-radius: 10rem;
+  padding: 1rem;
+  width: 50px;
+  height: 50px;
+}
+
+.identity-design__content-bottom {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.identity-design__content-bottom a {
+  border: var(--color-gray-tertiary) solid 1px;
+  border-radius: 10rem;
+  padding: 1rem;
+}
