@@ -10,12 +10,16 @@
   --color-black: #0e0e0e;
   --color-gray: #2f2f2f;
   --color-gray-secondary: #525252;
+  --color-gray-tertiary: #a6a6a6;
 }
 
 body {
   background-color: var(--color-black);
   font-family: Arial, sans-serif;
   padding: 10px 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
 }
 
 a {
@@ -119,9 +123,7 @@ section.hero {
 
 section.hero .star-icon {
   position: absolute;
-  top: 60%;
-  left: 10%;
-  transform: translateY(-50%);
+  top: 31rem;
   width: 100px;
   height: 100px;
 }
@@ -143,6 +145,12 @@ section.hero h2 {
 section.hero div {
   width: 50%;
   height: 100%;
+
+}
+
+section.hero div.hero-image img {
+  object-fit: contain;
+  width: 100%;
 }
 
 section.hero h2 p {
@@ -248,19 +256,20 @@ section.story div.story__content-right {
 }
 
 section.story div.story__content-right img{
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
 }
 
 section.story div.story__content-right div.nextpage {
   display: flex;
   align-items: flex-end;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 section.story div.story__content-right div.nextpage div.button-containter {
   display: flex;
   gap: 1rem;
-  
 }
 
 section.story div.story__content-right div.nextpage p {
