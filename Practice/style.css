@@ -538,4 +538,43 @@ div.skill-items__content-bottom a:hover {
   transition: 0.3s ease;
 }
 
+section.our-work {
+  margin-top: 5rem;
+  border-top: var(--color-gray-secondary) solid 1px;
+}
+
+section.our-work div.header__text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-white);
+  letter-spacing: -1.3px;
+  display: flex;
+  width: 100%;
+}
+
+section.our-work div.header__text span {
+  white-space: nowrap;
+  font-weight: 300;
+  color: var(--color-gray-secondary);
+}
+
+section.our-work div.header__text h3 {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: var(--color-gray-secondary);
+  font-weight: 300
+}
+
+section.our-work div.masterpiece {
+  margin-top: 9rem;
+  width: 100%;
+}
+
+section.our-work div.masterpiece p {
+  color: var(--color-white);
+  font-size: 14.5vw;
+  letter-spacing: -21px;
+  text-align: center;
+}
 
