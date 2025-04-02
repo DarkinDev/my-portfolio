@@ -478,12 +478,12 @@ div.skill-items{
   display: flex;
 }
 
-.skill-items div.skill-items__icon img{
+div.skill-items div.skill-items__icon img{
   width: 60px;
   height: 60px;
 }
 
-.skill-items div.skill-items__content {
+div.skill-items div.skill-items__content {
   display: flex;
   color: var(--color-white);
   font-family: "Open Sans", sans-serif;
@@ -495,7 +495,7 @@ div.skill-items{
   width: 100%;
 }
 
-.skill-items__content-top {
+div.skill-items__content-top {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -507,11 +507,11 @@ p.skill-items__content-top--text {
   letter-spacing: -0.0375em;
 }
 
-.skill-items__content-top a div img {
+div.skill-items__content-top a div img {
   object-fit: fill;
 }
 
-.skill-items__content-top a div {
+div.skill-items__content-top a div {
   border: var(--color-gray-tertiary) solid 1px;
   border-radius: 10rem;
   padding: 1rem;
@@ -519,20 +519,20 @@ p.skill-items__content-top--text {
   height: 50px;
 }
 
-.skill-items__content-bottom {
+div.skill-items__content-bottom {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   font-size: 1.2rem;
 }
 
-.skill-items__content-bottom a {
+div.skill-items__content-bottom a {
   border: var(--color-gray) solid 1px;
   border-radius: 10rem;
   padding: 1rem;
 }
 
-.skill-items__content-bottom a:hover {
+div.skill-items__content-bottom a:hover {
   background-color: var(--color-gray-secondary);
   color: var(--color-white);
   transition: 0.3s ease;
