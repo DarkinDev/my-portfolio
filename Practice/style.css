@@ -22,8 +22,10 @@ body {
   position: relative;
 }
 
-a {
+a, a:link, a:visited {
+  color: var(--color-white);
   text-decoration: none;
+
 }
 
 .navbar {
@@ -410,3 +412,130 @@ section.services div.services__content div.skill {
   line-height: 5rem;
   letter-spacing: -9px;
 }
+
+section.get-in-touch {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+section.get-in-touch div.get-in-touch__button {
+  width: 25vw;
+}
+
+section.get-in-touch div.get-in-touch__button button{
+  border: var(--color-gray) solid 1px;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  background-color: transparent;
+  width: 13rem;
+}
+
+section.get-in-touch div.get-in-touch__button p {
+  color: var(--color-white);
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: -0.0375em;
+}
+
+section.get-in-touch div.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "identity rebranding"
+  "identity marketing"
+  "social creative";
+  border: var(--color-gray) solid 1px;
+  height: 200vh;
+}
+
+div.identity-design {
+  grid-area: identity;
+}
+
+div.rebranding{
+  grid-area: rebranding;
+}
+
+div.marketing{
+  grid-area: marketing;
+}
+
+div.social {
+  grid-area: social;
+}
+
+div.creative {
+  grid-area: creative;
+}
+
+div.skill-items{
+  padding: 2em;
+  border: var(--color-gray) solid 1px;
+  display: flex;
+}
+
+div.skill-items div.skill-items__icon img{
+  width: 60px;
+  height: 60px;
+}
+
+div.skill-items div.skill-items__content {
+  display: flex;
+  color: var(--color-white);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 4.5rem;
+  margin-left: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div.skill-items__content-top {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.skill-items__content-top--text {
+  font-size: 2.2rem;
+  letter-spacing: -0.0375em;
+}
+
+div.skill-items__content-top a div img {
+  object-fit: fill;
+}
+
+div.skill-items__content-top a div {
+  border: var(--color-gray-tertiary) solid 1px;
+  border-radius: 10rem;
+  padding: 1rem;
+  width: 50px;
+  height: 50px;
+}
+
+div.skill-items__content-bottom {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+}
+
+div.skill-items__content-bottom a {
+  border: var(--color-gray) solid 1px;
+  border-radius: 10rem;
+  padding: 1rem;
+}
+
+div.skill-items__content-bottom a:hover {
+  background-color: var(--color-gray-secondary);
+  color: var(--color-white);
+  transition: 0.3s ease;
+}
+
+
