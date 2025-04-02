@@ -22,8 +22,10 @@ body {
   position: relative;
 }
 
-a {
+a, a:link, a:visited {
+  color: var(--color-white);
   text-decoration: none;
+
 }
 
 .navbar {
@@ -422,8 +424,8 @@ section.get-in-touch div.get-in-touch__button {
 }
 
 section.get-in-touch div.get-in-touch__button button{
-  border: var(--color-gray-tertiary) solid 1px;
-  padding: 1rem 3rem;
+  border: var(--color-gray) solid 1px;
+  padding: 1rem 2rem;
   border-radius: 10rem;
   background-color: transparent;
   width: 13rem;
@@ -441,26 +443,47 @@ section.get-in-touch div.get-in-touch__button p {
 section.get-in-touch div.skill-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  border: var(--color-gray-tertiary) solid 1px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "identity rebranding"
+  "identity marketing"
+  "social creative";
+  border: var(--color-gray) solid 1px;
+  height: 200vh;
 }
 
-.identity-design {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
+div.identity-design {
+  grid-area: identity;
+}
+
+div.rebranding{
+  grid-area: rebranding;
+}
+
+div.marketing{
+  grid-area: marketing;
+}
+
+div.social {
+  grid-area: social;
+}
+
+div.creative {
+  grid-area: creative;
+}
+
+div.skill-items{
   padding: 2em;
-  border: var(--color-gray-tertiary) solid 1px;
+  border: var(--color-gray) solid 1px;
   display: flex;
 }
 
-.identity-design div.donut-icon img{
+.skill-items div.skill-items__icon img{
   width: 60px;
   height: 60px;
 }
 
-.identity-design div.identity-design__content {
+.skill-items div.skill-items__content {
   display: flex;
   color: var(--color-white);
   font-family: "Open Sans", sans-serif;
@@ -468,27 +491,27 @@ section.get-in-touch div.skill-grid {
   margin-top: 4.5rem;
   margin-left: 1.5rem;
   flex-direction: column;
-  height: 35rem;
   justify-content: space-between;
+  width: 100%;
 }
 
-.identity-design div.identity-design__content p {
-  font-size: 1.2rem;
-  letter-spacing: -0.0375em;
-}
-
-.identity-design__content-top {
+.skill-items__content-top {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
 }
 
-.identity-design__content-top a div img {
+p.skill-items__content-top--text {
+  font-size: 2.2rem;
+  letter-spacing: -0.0375em;
+}
+
+.skill-items__content-top a div img {
   object-fit: fill;
 }
 
-.identity-design__content-top a div {
+.skill-items__content-top a div {
   border: var(--color-gray-tertiary) solid 1px;
   border-radius: 10rem;
   padding: 1rem;
@@ -496,14 +519,23 @@ section.get-in-touch div.skill-grid {
   height: 50px;
 }
 
-.identity-design__content-bottom {
+.skill-items__content-bottom {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  font-size: 1.2rem;
 }
 
-.identity-design__content-bottom a {
-  border: var(--color-gray-tertiary) solid 1px;
+.skill-items__content-bottom a {
+  border: var(--color-gray) solid 1px;
   border-radius: 10rem;
   padding: 1rem;
 }
+
+.skill-items__content-bottom a:hover {
+  background-color: var(--color-gray-secondary);
+  color: var(--color-white);
+  transition: 0.3s ease;
+}
+
+
