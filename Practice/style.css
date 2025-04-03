@@ -578,3 +578,55 @@ section.our-work div.masterpiece p {
   text-align: center;
 }
 
+section.our-work div.masterpiece__content {
+  display: flex;
+  color: var(--color-white);
+  width: 100%;
+  gap: 1rem;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+div.masterpiece__content--items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+div.masterpiece__content--items h4 {
+  height: 1rem;
+}
+
+div.items--img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p.items--top {
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: -2px;
+}
+
+p.items--bot {
+  color: var(--color-gray-secondary);
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: -1px;
+  font-size: 1.1rem;
+}
+
+div.items--img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+div.impact {
+  
+}
