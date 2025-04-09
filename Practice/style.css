@@ -8,7 +8,7 @@
   --color-scheme: light dark;
   --color-white: #fefefe;
   --color-black: #0e0e0e;
-  --color-gray: #2f2f2f;
+  --color-gray: #1a1a1a;
   --color-gray-secondary: #525252;
   --color-gray-tertiary: #a6a6a6;
 }
@@ -806,3 +806,84 @@ div.project__right {
   left: 0;
   bottom: 0;
 }
+
+section.comment {
+  background-color: var(--color-gray);
+  margin-top: 10rem;
+  padding: 3rem;
+}
+
+div.comment__header {
+  display: flex;
+  height: 50vh;
+}
+
+div.comment__header--left {
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+div.comment__header--left a {
+  padding: 1.5rem;
+  border-radius: 10rem;
+  border: var(--color-gray-tertiary) solid 1px;
+  aspect-ratio: 1 / 1;
+  align-items: center;
+}
+
+div.header--leftarrow {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  height: 30px;
+}
+
+div.header--rightarrow {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  height: 30px;
+}
+
+div.header--leftarrow img {
+  height: 100%;
+  width: 100%;
+  transform: scaleX(-1);
+  object-fit: contain;
+}
+
+div.header--rightarrow img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+div.comment__header--right {
+  display: flex;
+  align-items: flex-end;
+}
+
+div.comment__header--right p {
+  display: inline-block;
+  color: var(--color-white);
+  font-size: 4rem;
+  letter-spacing: -3px;
+}
+
+div.comment__header--right span {
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+  transform: translateY(10px);
+}
+
+div.comment__header--right span img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+div.diamond-icon {
+  margin-left: 13em;
+}
+
