@@ -8,9 +8,10 @@
   --color-scheme: light dark;
   --color-white: #fefefe;
   --color-black: #0e0e0e;
-  --color-gray: #1a1a1a;
+  --color-gray: #1f1f1f;
   --color-gray-secondary: #525252;
   --color-gray-tertiary: #a6a6a6;
+  --color-gray-quaternary: #252525;
 }
 
 body {
@@ -815,7 +816,7 @@ section.comment {
 
 div.comment__header {
   display: flex;
-  height: 50vh;
+  height: 40vh;
 }
 
 div.comment__header--left {
@@ -867,7 +868,7 @@ div.comment__header--right p {
   display: inline-block;
   color: var(--color-white);
   font-size: 4rem;
-  letter-spacing: -3px;
+  letter-spacing: -4px;
 }
 
 div.comment__header--right span {
@@ -887,3 +888,104 @@ div.diamond-icon {
   margin-left: 13em;
 }
 
+div.comment__body {
+  display: flex;
+  margin-top: 5rem;
+  color: var(--color-white);
+  border: var(--color-gray-secondary) 1px solid;
+  background-color: var(--color-gray);
+  height: 65vh;
+}
+
+div.comment__body--left {
+  min-width: 27%;
+  background-color: var(--color-gray-quaternary);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+div.comment__body--left h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 6rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+div.left--rating {
+  display: flex;
+  height: 4rem;
+  gap: 0.5rem;
+}
+
+div.left--rating img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+div.comment__body--left span {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: var(--color-gray-secondary);
+}
+
+div.left--logo {
+  display: flex;
+  color: var(--color-gray-secondary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.1rem;
+  align-items: flex-end;
+  height: 100%;
+}
+
+div.comment__body--right {
+  display: flex;
+  width: 100%;
+}
+
+div.right--review {
+  display: flex;
+  flex-direction: column;
+  border: var(--color-gray-secondary) 1px solid;
+  padding: 3rem;
+  height: 100%;
+}
+
+.review--top h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  color: var(--color-gray-tertiary);
+}
+
+div.right--review p {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: -1px;
+}
+
+div.review--bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+div.review--bottom h5 {
+  font-size: 1.2rem;
+
+}
+
+div.review--bottom span {
+  color: var(--color-gray-tertiary);
+  font-size: 1.2rem;
+}
