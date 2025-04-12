@@ -67,7 +67,13 @@ a, a:link, a:visited {
   bottom: 0px;
   width: 100%;
   height: 1px;
-} 
+}
+
+.nav-left a:hover::after {
+  background-color: var(--color-white);
+  height: 2px;
+  transition: height 0.3s ease;
+}
 
 .nav-left a div.arrow-icon {
   width: 16px;
@@ -293,7 +299,11 @@ section.story div.story__content-right div.nextpage-button {
   padding: 45px;
   border: 1px solid white;
   border-radius: 100%;
-  
+}
+
+section.story div.story__content-right div.nextpage-button:hover {
+  background-color: var(--color-gray-secondary);
+  transition: 0.3s ease;
 }
 
 section.story div.story__content-right div.nextpage-button img {
@@ -435,6 +445,12 @@ section.get-in-touch div.get-in-touch__button button{
   width: 13rem;
 }
 
+section.get-in-touch div.get-in-touch__button button:hover {
+  background-color: var(--color-gray-secondary);
+  color: var(--color-white);
+  transition: 0.3s ease;
+}
+
 section.get-in-touch div.get-in-touch__button p {
   color: var(--color-white);
   justify-content: center;
@@ -521,6 +537,12 @@ div.skill-items__content-top a div {
   padding: 1rem;
   width: 50px;
   height: 50px;
+}
+
+div.skill-items__content-top a div:hover {
+  background-color: var(--color-gray-secondary);
+  color: var(--color-white);
+  transition: 0.3s ease;
 }
 
 div.skill-items__content-bottom {
@@ -721,6 +743,12 @@ div.branding__right--bot a{
   align-items: center;
 }
 
+div.branding__right--bot a:hover {
+  background-color: var(--color-gray-secondary);
+  color: var(--color-white);
+  transition: 0.3s ease;
+}
+
 div.branding__right--bot a img{
   aspect-ratio: 1/1;
 }
@@ -773,6 +801,12 @@ div.bottom--button {
   padding: 3rem;
   border: var(--color-gray-tertiary) solid 1px;
   border-radius: 10rem;
+}
+
+div.bottom--button:hover {
+  background-color: var(--color-gray-secondary);
+  color: var(--color-white);
+  transition: 0.3s ease;
 }
 
 div.bottom--button img {
@@ -1088,7 +1122,6 @@ div.contact {
 
 .contact-items {
   width: 100%;
-
 }
 
 div.contact__social {
@@ -1110,6 +1143,11 @@ div.contact__social a img{
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+div.contact__social a:hover {
+  background-color: var(--color-gray-secondary);
+  transition: 0.3s ease;
 }
 
 .contact__phone h4 {
@@ -1143,3 +1181,28 @@ div.contact__social a img{
   letter-spacing: -1px;
   font-weight: 300;
 }
+
+div.copyright {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  letter-spacing: -1px;
+  margin-top: 7rem;
+  border-top: 1px solid var(--color-gray-secondary);
+  padding-top: 1rem;
+}
+
+div.footer-right {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: var(--color-white);
+  gap: 2rem;
+}
+
+span.footer-left {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
