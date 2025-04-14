@@ -1206,3 +1206,12 @@ span.footer-left {
   color: var(--color-white);
 }
 
+div.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  white-space: nowrap;
+  color: var(--color-gray-quaternary);
+  letter-spacing: -2rem;
+}
