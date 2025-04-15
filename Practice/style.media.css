@@ -1,0 +1,45 @@
+#menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    padding: 0;
+  }
+
+  main {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 10;
+    transition: all 0.9s ease-in-out;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    background: #444;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Hiện menu khi checkbox được bật */
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+    position: absolute;
+    bottom: -250%;
+    left: 0;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
