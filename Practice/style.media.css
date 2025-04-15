@@ -23,23 +23,36 @@
     display: block;
   }
 
+  .hamburger:active {
+    transform: scale(0.95);
+  }
+
   .menu {
     display: none;
+    opacity: 0;
     background: #444;
     margin-top: 1rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-right a:active {
+    transform: scale(0.95);
   }
 
   /* Hiện menu khi checkbox được bật */
   #menu-toggle:checked + .hamburger + .menu {
-    display: flex;
+    display: block;
     position: absolute;
     bottom: -250%;
     left: 0;
+    opacity: 1;
   }
 }
+
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */
 }
+
+@keyframes 
