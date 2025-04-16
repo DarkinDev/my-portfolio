@@ -1215,4 +1215,5 @@ div.footer-logo {
   white-space: nowrap;
   color: var(--color-gray-quaternary);
   letter-spacing: -2rem;
+  overflow: hidden;
 }
