@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.media.css" />
   </head>
-  <body>
+  <body id="top">
     <nav class="navbar">
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="hamburger">
@@ -30,14 +30,14 @@
             </a>
           </li>
           <li>
-            <a href="#"
+            <a href="#work"
               >Work
               <div class="arrow-icon">
                 <img src="asset/svgs/arrow-top-right.svg" alt="nav icon" /></div
             ></a>
           </li>
           <li>
-            <a href="#"
+            <a href="#about"
               >About
               <div class="arrow-icon">
                 <img
@@ -48,7 +48,7 @@
           </li>
         </ul>
       </div>
-      <div class="nav-center">
+      <a class="nav-center" href="#top">
         <h1>
           <div class="media">
             <span>M</span>
@@ -65,9 +65,9 @@
             <span>E</span>
           </div>
         </h1>
-      </div>
+      </a>
       <div class="nav-right">
-        <a href="#">Let's Talk</a>
+        <a href="#bot">Let's Talk</a>
       </div>
     </nav>
 
@@ -100,7 +100,7 @@
           <img src="./asset/imgs/travis.png" alt="hero image" />
         </div>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="plus-icon">
           <p>+</p>
         </div>
@@ -115,13 +115,14 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex
                 eius maxime quasi eos, sed pariatur rem totam libero ipsam,
                 nulla aut. Eveniet, quibusdam. Repellendus hic quidem sunt quasi
-                temporibus.
+                temporibus. '(This is just a school project portfolio website.)'
               </p>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Necessitatibus quasi aliquam aliquid delectus quas unde voluptas
                 minima ullam adipisci sint tempore quisquam, sit, quam,
-                exercitationem fugit neque at! Natus, debitis?
+                exercitationem fugit neque at! Natus, debitis? '(This is just a
+                school project portfolio website.)'
               </p>
             </div>
           </article>
@@ -133,7 +134,8 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolores officiis aliquam nam, incidunt dolorem fugiat soluta
                 modi sit unde vitae! Harum adipisci qui provident impedit
-                perspiciatis sed dolorum laborum voluptatum?
+                perspiciatis sed dolorum laborum voluptatum? '(This is just a
+                school project portfolio website.)'
               </p>
             </div>
           </article>
@@ -217,7 +219,12 @@
 
       <section class="get-in-touch">
         <div class="get-in-touch__button">
-          <button><p>Get In Touch</p></button>
+          <button
+            type="button"
+            onclick="window.open('mailto:darkin6336@gmail.com?subject=Inquiry%20from%20portfolio'); document.getElementById('bot').scrollIntoView({behavior:'smooth'});"
+          >
+            <p>Get In Touch</p>
+          </button>
         </div>
         <div class="skill-grid">
           <div class="skill-items identity-design">
@@ -337,7 +344,7 @@
         </div>
       </section>
 
-      <section class="our-work">
+      <section id="work" class="our-work">
         <div class="header__text">
           <span>[ 03 ]</span>
           <h3>Our Work</h3>
@@ -544,7 +551,7 @@
         </div>
       </section>
 
-      <footer>
+      <footer id="bot">
         <h3>
           LET'S DEVELOP <br />
           YOUR IDEA
@@ -577,7 +584,7 @@
           <div class="contact-items nav-left">
             <ul>
               <li>
-                <a href="#"
+                <a href="#top"
                   >Home
                   <div class="arrow-icon">
                     <img src="asset/svgs/arrow-top-right.svg" alt="nav icon" />
@@ -585,7 +592,7 @@
                 </a>
               </li>
               <li>
-                <a href="#"
+                <a href="#work"
                   >Work
                   <div class="arrow-icon">
                     <img
@@ -595,7 +602,7 @@
                 ></a>
               </li>
               <li>
-                <a href="#"
+                <a href="#about"
                   >About
                   <div class="arrow-icon">
                     <img
@@ -608,9 +615,9 @@
           </div>
           <div class="contact-items contact__phone">
             <h4>Phone</h4>
-            <a href="#">310-437-2766</a>
+            <a href="#">0869-157-139</a>
             <h4>Mail</h4>
-            <a href="#">darkin6336@gmail.com</a>
+            <a href="mailto:darkin6336@gmail.com">darkin6336@gmail.com</a>
           </div>
           <div class="contact-items contact__address">
             <h4>Address</h4>
@@ -633,5 +640,29 @@
         </div>
       </footer>
     </main>
+    <script>
+      (function () {
+        const navLeft = document.querySelector('.nav-left');
+        const navRight = document.querySelector('.nav-right');
+        if (!navLeft && !navRight) return;
+        let ticking = false;
+        function setHidden(state) {
+          if (navLeft) navLeft.classList[state ? 'add' : 'remove']('hidden');
+          if (navRight) navRight.classList[state ? 'add' : 'remove']('hidden');
+        }
+        function onScroll() {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              setHidden(window.scrollY > 20);
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        // initial state
+        setHidden(window.scrollY > 20);
+      })();
+    </script>
   </body>
 </html>

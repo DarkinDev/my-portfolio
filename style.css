@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* enable smooth scrolling for in-page anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-scheme: light dark;
   --color-white: #fefefe;
@@ -42,9 +47,14 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-black);
+  background-color: transparent;
   color: var(--color-white);
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* ensure navbar stays opaque when stuck */
+  backdrop-filter: transparent;
 }
 
 .nav-left ul {
@@ -70,7 +80,7 @@ a:visited {
 
 .nav-left a::after {
   background-color: var(--color-gray-secondary);
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0px;
@@ -93,6 +103,30 @@ a:visited {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Smooth hide/slide behavior for left nav when scrolling */
+.nav-left {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+.nav-left.hidden {
+  transform: translateX(-120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Mirror behavior for the right-side button */
+.nav-right {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+.nav-right.hidden {
+  transform: translateX(120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav-center h1 {
@@ -194,6 +228,7 @@ section.hero h2 span.end-line {
 }
 
 section.about {
+  padding-top: 10rem;
   margin-top: 2rem;
   border-top: 1px solid var(--color-gray-secondary);
   display: flex;
@@ -227,7 +262,7 @@ div.about__content-right article:nth-child(1) div *:not(:first-child) {
 
 div.about__content-right article div {
   color: var(--color-white);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
@@ -292,7 +327,7 @@ section.story div.story__content-right div.nextpage div.button-containter {
 
 section.story div.story__content-right div.nextpage p {
   color: var(--color-white);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,11 +340,14 @@ section.story div.story__content-right div.nextpage-button {
   padding: 45px;
   border: 1px solid white;
   border-radius: 100%;
+  transition: transform 0.25s ease, background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 section.story div.story__content-right div.nextpage-button:hover {
   background-color: var(--color-gray-secondary);
-  transition: 0.3s ease;
+  transform: scale(1.06);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
 }
 
 section.story div.story__content-right div.nextpage-button img {
@@ -360,6 +398,14 @@ section.experience div.experience__button {
   height: 100%;
   width: 100%;
   border: var(--color-gray-tertiary) solid 1px;
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.experience__button-content:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 section.experience div.experience__button-content p {
@@ -418,7 +464,7 @@ section.services div.services__content div.lmk {
   align-self: flex-end;
   color: var(--color-white);
   width: 25vw;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   letter-spacing: -0.0375em;
@@ -458,7 +504,7 @@ section.get-in-touch div.get-in-touch__button button:hover {
 section.get-in-touch div.get-in-touch__button p {
   color: var(--color-white);
   justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: -0.0375em;
@@ -469,9 +515,9 @@ section.get-in-touch div.skill-grid {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-    "identity rebranding"
-    "identity marketing"
-    "social creative";
+    'identity rebranding'
+    'identity marketing'
+    'social creative';
   border: var(--color-gray) solid 1px;
   height: 200vh;
 }
@@ -510,7 +556,7 @@ div.skill-items div.skill-items__icon img {
 div.skill-items div.skill-items__content {
   display: flex;
   color: var(--color-white);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   margin-top: 4.5rem;
   margin-left: 1.5rem;
@@ -603,7 +649,7 @@ section.our-work div.masterpiece {
 
 section.our-work div.masterpiece p {
   color: var(--color-white);
-  font-size: 14.5vw;
+  font-size: 14.3rem;
   letter-spacing: -21px;
   text-align: center;
 }
@@ -647,7 +693,7 @@ p.items--top {
 p.items--bot {
   color: var(--color-gray-secondary);
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: -1px;
   font-size: 1.1rem;
 }
@@ -674,7 +720,7 @@ div.impact div.impact__left {
 div.impact__right {
   white-space: nowrap;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: var(--color-gray-tertiary);
   font-size: 1.2rem;
 }
@@ -732,7 +778,7 @@ div.branding__right--bot {
 
 div.branding__right--bot p {
   color: var(--color-gray-secondary);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 300;
   letter-spacing: -1px;
 }
@@ -818,7 +864,7 @@ div.bottom--button img {
 
 div.project__left--bottom p {
   font-size: 2rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   letter-spacing: -2px;
 }
@@ -942,14 +988,14 @@ div.comment__body--left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 div.comment__body--left h3 {
   display: flex;
   justify-content: center;
   font-size: 6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
 }
 
@@ -996,7 +1042,7 @@ div.right--review {
 }
 
 .review--top h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   letter-spacing: -1px;
@@ -1007,7 +1053,7 @@ div.right--review p {
   margin-top: 2.5rem;
   font-size: 1.5rem;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: -1px;
 }
 
@@ -1055,7 +1101,7 @@ div.email__tittle {
 div.email__tittle p {
   display: flex;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   letter-spacing: -1px;
   color: var(--color-gray-tertiary);
@@ -1065,7 +1111,7 @@ div.email__tittle p {
 div.email__tittle span {
   font-size: 2rem;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 div.email__input {
@@ -1093,7 +1139,7 @@ div.email__input--box input {
 div.email__input--button {
   width: 30%;
   background-color: var(--color-white);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 1.3rem;
   letter-spacing: -1px;
@@ -1152,7 +1198,7 @@ div.contact__social a:hover {
 }
 
 .contact__phone h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: var(--color-gray-tertiary);
   font-size: 1.2rem;
@@ -1160,7 +1206,7 @@ div.contact__social a:hover {
 }
 
 .contact__phone a {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
   padding: 2rem 0rem 2rem 0rem;
   letter-spacing: -1px;
@@ -1169,7 +1215,7 @@ div.contact__social a:hover {
 }
 
 .contact__address h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: var(--color-gray-tertiary);
   font-size: 1.2rem;
@@ -1177,7 +1223,7 @@ div.contact__social a:hover {
 }
 
 .contact__address p {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
   letter-spacing: -1px;
   font-weight: 300;
@@ -1195,14 +1241,14 @@ div.copyright {
 
 div.footer-right {
   display: flex;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: var(--color-white);
   gap: 2rem;
 }
 
 span.footer-left {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: var(--color-white);
 }
